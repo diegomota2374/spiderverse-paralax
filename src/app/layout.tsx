@@ -14,17 +14,24 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <header>
-        <Image
-          src="/icons/menu.svg"
-          alt="Opções de menu"
-          width={36}
-          height={25}
-        />
-        <Image src="/spider-logo.svg" alt="Spiderman" width={260} height={70} />
-        <Image src="/icons/user.svg" alt="Login" width={36} height={36} />
-      </header>
-      <body>{children}</body>
+      <body>
+        <header>
+          <Image
+            src="/icons/menu.svg"
+            alt="Opções de menu"
+            width={36}
+            height={25}
+          />
+          <Image
+            src="/spider-logo.svg"
+            alt="Spiderman"
+            width={260}
+            height={70}
+          />
+          <Image src="/icons/user.svg" alt="Login" width={36} height={36} />
+        </header>
+        {children}
+      </body>
     </html>
   );
 }
