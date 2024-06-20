@@ -1,4 +1,6 @@
+import { spidermanFont } from "@/fonts";
 import { IHeroData } from "@/interfaces/heroes";
+import styles from "./heroesList.module.scss";
 
 interface IProps {
   heroes: IHeroData[];
@@ -6,10 +8,9 @@ interface IProps {
 export default function HeroesList({ heroes }: IProps) {
   return (
     <>
-      <h1>Peronagens</h1>
-      {heroes.map((hero) => (
-        <p key={hero.id}>{hero.name}</p>
-      ))}
+      <h1 className={`${spidermanFont.className} ${styles.title}`}>
+        Peronagens
+      </h1>
     </>
   );
 }
